@@ -1,11 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reebok Webpage</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Product Grid</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      .main_div {
+        margin: 20px 40px 0 40px;
+        padding: 10px;
+      }
+
+      .product-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+        margin: 0 auto;
+      }
+
+      .product-card {
+        border-radius: 2px;
+        background-color: #ffffff;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .gradient-box {
+        background: linear-gradient(to right, #38ef7d, #11998e);
+        color: white;
+        font-size: small;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        padding: 5px;
+        z-index: 1;
+      }
+
+      .fa-heart {
+        position: absolute;
+        top: 20px;
+        right: 10px;
+        z-index: 1;
+        color: #000;
+      }
+
+      .product-image {
+        height: 500px;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 2px;
+      }
+
+      .product-title {
+        text-transform: uppercase;
+        font-size: small;
+        font-weight: 500;
+        color: #1a1919;
+        margin-top: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-right: 7px;
+        
+      }
+
+      .product-price {
+        font-weight: 600;
+        color: #0c0c0c;
+        margin-top: 5px;
+        
+      }
+
+      /* Responsive design adjustments */
+      @media (max-width: 768px) {
+        .product-grid {
+          grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        }
+
+        .product-image {
+          height: 300px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .product-card {
+          padding: 15px;
+        }
+
+        .product-title {
+          font-size: 0.9rem;
+        }
+
+        .product-price {
+          font-size: 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main_div">
+      <div class="product-grid">
+        <div class="product-card">
+          <p class="gradient-box">I AM THE NEW</p>
+          <i class="fa-regular fa-heart"></i>
+          <img
+            class="product-image"
+            src="shoes.jfif"
+            alt="Reebok Women NFX Trainer"
+          />
+          <h2 class="product-title">Training Shoes  <i class="fa-regular fa-square"></i></h2>
+          <h2 class="product-title">Reebok Women NFX Trainer</h2>
+          <p class="product-price">₹7,599</p>
+        </div>
+        <div class="product-card">
+          <p class="gradient-box">I AM THE NEW</p>
+          <i class="fa-regular fa-heart"></i>
+          <img
+            class="product-image"
+            src="shoes.jfif"
+            alt="Reebok Women NFX Trainer"
+          />
+          <h2 class="product-title">Training Shoes  <i class="fa-regular fa-square"></i></h2>
+          <h2 class="product-title">Reebok Women NFX Trainer</h2>
+          <p class="product-price">₹7,599</p>
+        </div>
+        <div class="product-card">
+          <p class="gradient-box">I AM THE NEW</p>
+          <i class="fa-regular fa-heart "></i>
+          <img
+            class="product-image"
+            src="shoes.jfif"
+            alt="Reebok Women NFX Trainer"
+          />
+          <h2 class="product-title">Training Shoes  <i class="fa-regular fa-square"></i></h2>
+          <h2 class="product-title">Reebok Women NFX Trainer</h2>
+          <p class="product-price">₹7,599</p>
+        </div>
+        <div class="product-card">
+          <p class="gradient-box">I AM THE NEW</p>
+          <i class="fa-regular fa-heart"></i>
+          <img
+            class="product-image"
+            src="shoes.jfif"
+            alt="Reebok Women NFX Trainer"
+          />
+          <h2 class="product-title">Training Shoes  <i class="fa-regular fa-square"></i></h2>
+          <h2 class="product-title">Reebok Women NFX Trainer</h2>
+          <p class="product-price">₹7,599</p>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
